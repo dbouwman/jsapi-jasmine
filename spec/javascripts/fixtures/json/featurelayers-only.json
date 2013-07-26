@@ -1,0 +1,8 @@
+{
+	"featureLayers":[
+		{
+			"id":"WildfireNotes",
+			"url":"http://services.arcgis.com/DO4gTjwJVIJ7O9Ca/arcgis/rest/services/2013_Wildfire_Notes/FeatureServer/0"
+		}
+	]
+}

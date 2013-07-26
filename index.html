@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10"> 
+    <!--The viewport meta tag is used to improve the presentation and behavior of the samples 
+      on iOS devices-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Ye Olde Contrived Example Map</title> 
+
+    <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/claro/claro.css"> 
+    <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css">
+    <style>
+      html, body, #mapDiv {
+        padding:0;
+        margin:0;
+        height:100%;
+      }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>dojoConfig = { parseOnLoad:true };</script> 
+    <script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/"></script> 
+    <script src="./lib/underscore-min.js"></script>
+    <script src="./src/map-configurator.js"></script>
+    <script> 
+      dojo.require("esri.map");
+      dojo.require("esri.layers.FeatureLayer");
+
+      var map;
+      
+      function init() {
+        map = new esri.Map("mapDiv", { 
+          basemap: "national-geographic",
+          center: [-96.541, 38.34],
+          zoom: 6
+        });
+       
+        map.on("load", onLoaded);
+      }
+
+      function onLoaded(){
+        //create some json config
+        var config = {
+              "basemap": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer",
+              "layers":[
+                  {
+                            "id": "RedFlagWarnings",
+                            "url": "http://svinetfc3.fs.fed.us/ArcGIS_NPSG/rest/services/NPSG/Fire_Watches_Warnings/MapServer",
+                            "visibleLayers": [1],
+                            "visible": true,
+                            "opacity": 0.8
+                        },
+                        {
+                            "id": "MODISThermal",
+                            "url": "http://wildfire.cr.usgs.gov/ArcGIS/rest/services/geomac_dyn/MapServer",
+                            "visibleLayers": [2],
+                            "visible": true,
+                            "opacity": 0.8
+                        }
+              ],
+              "featureLayers":[
+                {
+                  "id":"WildfireNotes",
+                  "url":"http://services.arcgis.com/DO4gTjwJVIJ7O9Ca/arcgis/rest/services/2013_Wildfire_Notes/FeatureServer/0"
+                }
+              ]
+            };
+        app.MapConfigurator.load(map,config,mapLoaded);
+      }
+
+      function mapLoaded(results){
+        console.log('Do something with the results!');
+      }
+
+
+      dojo.ready(init);
+    </script> 
+  </head> 
+  <body class="claro"> 
+    <div id="mapDiv">
+    </div>
+  </body> 
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="grunt-jasmine">
+<head>
+  <meta charset="utf-8">
+
+  <title>Example Map Spec Runner</title>
+  <!-- Add in the CSS so the map actually lays out in the DOM correctly -->
+  <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/claro/claro.css"> 
+  <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css">
+
+
+  <link rel="stylesheet" type="text/css" href=".grunt/grunt-contrib-jasmine/jasmine.css">
+
+
+<!-- and of course the jsapi - even better if you have a local copy -->
+<script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/"></script>
+<script>
+  //Whatever you require...
+  dojo.require('esri.map');
+  dojo.require('esri.layers.FeatureLayer');
+  dojo.require('esri.renderer');
+  dojo.require('esri.arcgis.utils');
+</script>
+<!-- Standard Jasmine stuff here loading up the helpers, source, specs and reporters -->
+
+  
+  <script src=".grunt/grunt-contrib-jasmine/phantom-polyfill.js"></script>
+  
+  <script src=".grunt/grunt-contrib-jasmine/jasmine.js"></script>
+  
+  <script src=".grunt/grunt-contrib-jasmine/jasmine-html.js"></script>
+  
+  <script src="lib/jquery-1.8.3.js"></script>
+  
+  <script src="lib/underscore-min.js"></script>
+  
+  <script src="lib/jasmine-jquery.js"></script>
+  
+  <script src="spec/javascripts/helpers/maphelper.js"></script>
+  
+  <script src="src/map-configurator.js"></script>
+  
+  <script src="spec/javascripts/map-configurator.spec.js"></script>
+  
+  <script src=".grunt/grunt-contrib-jasmine/reporter.js"></script>
+  
+  <script src=".grunt/grunt-contrib-jasmine/jasmine-helper.js"></script>
+  
+
+</head>
+<body >
+
+</body>
+</html>

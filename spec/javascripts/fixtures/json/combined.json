@@ -1,0 +1,25 @@
+{
+	"basemap": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer",
+	"layers":[
+			{
+                "id": "RedFlagWarnings",
+                "url": "http://svinetfc3.fs.fed.us/ArcGIS_NPSG/rest/services/NPSG/Fire_Watches_Warnings/MapServer",
+                "visibleLayers": [1],
+                "visible": true,
+                "opacity": 0.8
+            },
+            {
+                "id": "MODISThermal",
+                "url": "http://wildfire.cr.usgs.gov/ArcGIS/rest/services/geomac_dyn/MapServer",
+                "visibleLayers": [2],
+                "visible": true,
+                "opacity": 0.8
+            }
+	],
+	"featureLayers":[
+		{
+			"id":"WildfireNotes",
+			"url":"http://services.arcgis.com/DO4gTjwJVIJ7O9Ca/arcgis/rest/services/2013_Wildfire_Notes/FeatureServer/0"
+		}
+	]
+}

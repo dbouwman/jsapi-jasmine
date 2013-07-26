@@ -1,0 +1,20 @@
+{
+  "name": "jsapi-jasmine",
+  "version": "0.0.0",
+  "description": "Example showing how to use grunt-contrib-jasmine to test code that uses the Esri JS API",
+  "homepage": "https://github.com/dbouwman/jsapi-jasmine",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": "git://github.com/dbouwman/jsapi-jasmine.git",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "0.4.0rc5",
+    "grunt-contrib-jshint": "~0.1.1rc5",
+    "grunt-contrib-jasmine": "*",
+    "grunt-contrib-watch": "~0.2.0rc5"
+  },
+  "dependencies": {}
+}

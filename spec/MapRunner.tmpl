@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="grunt-jasmine">
+<head>
+  <meta charset="utf-8">
+
+  <title>Example Map Spec Runner</title>
+  <!-- Add in the CSS so the map actually lays out in the DOM correctly -->
+  <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/claro/claro.css"> 
+  <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css">
+
+<% css.forEach(function(style){ %>
+  <link rel="stylesheet" type="text/css" href="<%= style %>">
+<% }) %>
+
+<!-- and of course the jsapi - even better if you have a local copy -->
+<script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/"></script>
+<script>
+  //Whatever you require...
+  dojo.require('esri.map');
+  dojo.require('esri.layers.FeatureLayer');
+  dojo.require('esri.renderer');
+  dojo.require('esri.arcgis.utils');
+</script>
+<!-- Standard Jasmine stuff here loading up the helpers, source, specs and reporters -->
+<% with (scripts) { %>
+  <% [].concat(polyfills, jasmine, vendor, helpers, src, specs, reporters, start).forEach(function(script){ %>
+  <script src="<%= script %>"></script>
+  <% }) %>
+<% }; %>
+</head>
+<body >
+
+</body>
+</html>
