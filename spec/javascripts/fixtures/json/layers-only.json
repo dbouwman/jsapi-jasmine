@@ -1,18 +1,18 @@
 {
 	"layers":[
-			{
-                "id": "RedFlagWarnings",
-                "url": "http://svinetfc3.fs.fed.us/ArcGIS_NPSG/rest/services/NPSG/Fire_Watches_Warnings/MapServer",
-                "visibleLayers": [1],
-                "visible": true,
-                "opacity": 0.8
-            },
-            {
-                "id": "MODISThermal",
-                "url": "http://wildfire.cr.usgs.gov/ArcGIS/rest/services/geomac_dyn/MapServer",
-                "visibleLayers": [2],
-                "visible": true,
-                "opacity": 0.8
-            }
+		{
+            "id": "RedFlagWarnings",
+            "url": "http://svinetfc3.fs.fed.us/ArcGIS_NPSG/rest/services/NPSG/Fire_Watches_Warnings/MapServer",
+            "visibleLayers": [1],
+            "visible": true,
+            "opacity": 0.8
+        },
+        {
+            "id": "MODISThermal",
+            "url": "http://wildfire.cr.usgs.gov/ArcGIS/rest/services/geomac_dyn/MapServer",
+            "visibleLayers": [2],
+            "visible": true,
+            "opacity": 0.8
+        }
 	]
 }

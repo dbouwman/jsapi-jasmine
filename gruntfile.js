@@ -41,7 +41,7 @@ module.exports = function (grunt) {
     },
 
     jasmine: {
-      composer: {
+      myApp: {
         src: ['./src/*.js'],
         //unclear why this helper is not loading this way...
         //added below under vendor and it works
